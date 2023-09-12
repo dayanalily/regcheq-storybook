@@ -1,0 +1,76 @@
+@import './../assets/css/styles.scss';
+
+.reg-btn {
+    font-size: 16px;
+    border: 0;
+    padding: $padding-default-button;
+    border-radius: $border-radius;
+    transition: $transition;
+
+    .iconLeft {
+        margin-right: 8px;
+    }
+
+    .iconRight {
+        margin-left: 4px;
+    }
+
+    &:disabled {
+        color: $onDisabled-color;
+        background-color: $bg-disabled;
+        border: 1px solid $bg-disabled;
+        cursor: not-allowed !important;
+        &:hover, &:focus {
+            color: $onDisabled-color;
+            background-color: $bg-disabled;
+            border: 1px solid $bg-disabled;
+        }
+    }
+
+    &--full-width {
+        width: $full-width;
+    }
+
+    &--rounded {
+        border-radius: $border-radius-round;
+    }
+
+    &--small {
+        font-size: 14px;
+        padding: $padding-small-button;
+    }
+
+    &--primary {
+        color: $onPrimary-color;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+
+        &:hover {
+            background-color: $primary-color-hover;
+            border: 1px solid $primary-color-hover;
+        }
+    }
+
+    &--secondary {
+        color: $primary-color;
+        background-color: transparent;
+        border: 1px solid $primary-color;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $onPrimary-color;
+        }
+    }
+
+    &--text {
+        color: $primary-color;
+        background-color: $bg-light;
+        border: 1px solid $bg-light;
+
+        &:hover {
+            color: $primary-color;
+            background-color: $bg-light-hover;
+            border: 1px solid $bg-light-hover;
+        }
+    }
+}

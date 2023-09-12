@@ -1,0 +1,44 @@
+@import './../assets/css/styles.scss';
+
+.reg-input {
+  margin-bottom: 16px;
+  &.hide-label {
+    .input-label {
+      display: none;
+    }
+  }
+  &--rounded {
+    .input-field {
+      border-radius: $border-radius-round;
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+  }
+  &--default {
+    .input-field {
+      border-radius: $border-radius;
+    }
+  }
+  .input-label {
+    font-size: 14px;
+    color: $label-color;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    color: $input-color;
+    font-size: 14px;
+    &:disabled{
+      cursor: not-allowed;
+    }
+  }
+  
+  .input-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
