@@ -1,36 +1,37 @@
 /** @type { import('@storybook/vue-webpack5').StorybookConfig } */
-const path = require('path'); // Para poder utilizar las rutas del sistema
-
 const config = {
-  stories: ['../components/stories/**/*.mdx', '../components/stories/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: [
+    "../components/stories/**/*.mdx",
+    "../components/stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+    {
+      name: '@storybook/addon-styling',
+      options: {
+        sass: {
+          implementation: require('sass'),
+        },
+      },
+    },
   ],
   framework: {
-    name: '@storybook/vue-webpack5',
+    name: "@storybook/vue-webpack5",
     options: {},
   },
   docs: {
-    autodocs: 'tag',
-    defaultName: 'Documentation',
+    autodocs: "tag",
   },
-  webpackFinal: async (config, { configType }) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'mixins': path.resolve(__dirname, '../../../mixins'),
-      '@': [path.resolve(__dirname, '../src/'), path.resolve(__dirname, '../')],
-    };
-
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: path.resolve(__dirname, '../'),
-    });
-
-    return config;
+  core: {
+    builder: {
+      name: '@storybook/builder-webpack5',
+      options: {
+        fsCache: true,
+        lazyCompilation: true,
+      },
+    },
   },
 };
-
 export default config;
