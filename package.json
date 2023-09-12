@@ -1,7 +1,18 @@
 {
-  "name": "components",
+  "name": "@dayanalily/regcheq-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "Regcheq UI Library",
+  "author": {
+    "name": "dayanalily",
+    "email": "dayanalily22@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dayanalily/regcheq-storybook"
+},
+"publishConfig": {
+  "registry": "https://npm.pkg.github.com/dayanalily"
+},
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
