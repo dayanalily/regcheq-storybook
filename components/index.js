@@ -1,8 +1,10 @@
 
 import RegButton from './stories/Button';
-import RerDateRangePicker from './stories/DateRangePicker';
+import RegDateRangePicker from './stories/DateRangePicker';
+import RegInput from './stories/Input';
 
 export {
     RegButton,
-    RerDateRangePicker
+    RegDateRangePicker,
+    RegInput
 };

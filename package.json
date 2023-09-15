@@ -1,18 +1,15 @@
 {
-  "name": "@dayanalily/regcheq-ui",
-  "version": "1.0.0",
+  "name": "@dayanalily/regcheq",
+  "version": "1.0.1",
   "description": "Regcheq UI Library",
-  "author": {
-    "name": "dayanalily",
-    "email": "dayanalily22@gmail.com"
-  },
+  "author": "dayanalily",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dayanalily/regcheq-storybook"
-},
-"publishConfig": {
-  "registry": "https://npm.pkg.github.com/dayanalily"
-},
+    "url": "git+https://github.com/dayanalily/regcheq-storybook.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/dayanalily"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,7 +19,6 @@
     "chromatic": "npx chromatic --project-token=chpt_a26e8e98d044aac"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.22.15",
@@ -43,13 +39,13 @@
     "vue-loader": "^15.10.1"
   },
   "dependencies": {
+    "@babel/cli": "^7.22.15",
     "@fortawesome/fontawesome-free": "^6.2.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^2.0.10",
-    "@regcheq/dni": "^1.1.9",
     "@storybook/addon-styling": "^1.3.7",
     "bootstrap": "^4.6.2",
     "bootstrap-vue": "^2.0.0",
@@ -58,6 +54,8 @@
     "vue": "^2.7.14",
     "vue2-daterange-picker": "^0.6.8"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "components@1.0.0"
+  "bugs": {
+    "url": "https://github.com/dayanalily/regcheq-storybook/issues"
+  },
+  "homepage": "https://github.com/dayanalily/regcheq-storybook#readme"
 }
